@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var tipoAlumno = prompt("¿Eres alumno de FP? (Sí/No)").toLowerCase(); // Convertimos a minúsculas para comparar
+var edad = parseInt(prompt("¿Cuál es tu edad?"));
+
+if (tipoAlumno === "si" || tipoAlumno === "sí") {
+    if (edad > 18) {
+        alert("¡Bienvenido Tienes acceso al portal web.");
+    } else {
+        alert("Lo siento, no tienes acceso al portal web.");
+    }
+} else {
+    alert("No eres alumno de FP.");
+}
+    </script>
+</body>
+</html>

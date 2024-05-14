@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var origen = prompt("Introduce la ciudad de origen:");
+var destino = prompt("Introduce la ciudad de destino:");
+var descuento = 0;
+
+if (origen.toLowerCase() === "palma") {
+    if (destino.toLowerCase() === "barcelona") {
+        descuento = 5;
+    } else if (destino.toLowerCase() === "madrid") {
+        descuento = 10;
+    } else if (destino.toLowerCase() === "valencia") {
+        descuento = 15;
+    } else {
+        alert("Lo siento, no hay descuento disponible para este destino.");
+    }
+} else {
+    alert("Lo siento, no hay descuento disponible para esta ciudad de origen.");
+}
+
+if (descuento > 0) {
+    alert("Se ha aplicado un descuento del " + descuento + "% para el viaje de " + origen + " a " + destino + ".");
+}
+    </script>
+</body>
+</html>

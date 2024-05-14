@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var numeroMes = parseInt(prompt("Introduce el número del mes (1 al 12):"));
+
+if (numeroMes >= 1 && numeroMes <= 12) {
+    if (numeroMes === 2) {
+        alert("El mes número " + numeroMes + " tiene 28 o 29 días.");
+    } else if (numeroMes === 4 || numeroMes === 6 || numeroMes === 9 || numeroMes === 11) {
+        alert("El mes número " + numeroMes + " tiene 30 días.");
+    } else {
+        alert("El mes número " + numeroMes + " tiene 31 días.");
+    }
+} else {
+    alert("Número de mes no válido. Por favor, introduce un número entre 1 y 12.");
+}
+    </script>
+</body>
+</html>

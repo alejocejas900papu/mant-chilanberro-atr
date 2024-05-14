@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de días de mes</title>
+<script>
+  function calcularDias() {
+    var mes = parseInt(document.getElementById("mes").value);
+    
+    // Validar si el mes está dentro del rango de 1 a 12
+    if (mes >= 1 && mes <= 12) {
+      var dias;
+      switch(mes) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+          dias = 31;
+          break;
+        case 4: case 6: case 9: case 11:
+          dias = 30;
+          break;
+        case 2:
+          // Año bisiesto
+          var año = new Date().getFullYear();
+          if ((año % 4 == 0 && año % 100 != 0) || año % 400 == 0) {
+            dias = 29;
+          } else {
+            dias = 28;
+          }
+          break;
+      }
+      document.getElementById("resultado").innerHTML = "El mes " + mes + " tiene " + dias + " días.";
+    } else {
+      alert("Por favor, introduce un número válido de mes (del 1 al 12).");
+    }
+  }
+</script>
+</head>
+<body>
+<h2>Calculadora de días de mes</h2>
+<p>Introduce el número del mes (del 1 al 12) para conocer cuántos días tiene:</p>
+<input type="number" id="mes" min="1" max="12">
+<button onclick="calcularDias()">Calcular</button>
+<p id="resultado"></p>
+</body>
+</html>
